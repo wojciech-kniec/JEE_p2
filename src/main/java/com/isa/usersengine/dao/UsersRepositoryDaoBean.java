@@ -6,16 +6,13 @@ import com.isa.usersengine.repository.UsersRepository;
 import java.util.List;
 
 public class UsersRepositoryDaoBean implements UsersRepositoryDao {
-
     @Override
     public void addUser(User user) {
         UsersRepository.getRepository().add(user);
-
     }
 
     @Override
     public User getUserById(Long id) {
-
         return UsersRepository
                 .getRepository()
                 .stream()
