@@ -1,11 +1,15 @@
 package com.isa.usersengine.service;
 
 import com.isa.usersengine.dao.UsersRepositoryDao;
-import com.isa.usersengine.dao.UsersRepositoryDaoBean;
 import com.isa.usersengine.domain.User;
 
+import javax.ejb.EJB;
+import javax.enterprise.context.RequestScoped;
+
+@RequestScoped
 public class UserService {
-    UsersRepositoryDao usersRepositoryDao = new UsersRepositoryDaoBean();
+    @EJB
+    UsersRepositoryDao usersRepositoryDao;
 
     public void saveUser(User user) {
         usersRepositoryDao.addUser(user);
