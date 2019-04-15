@@ -1,7 +1,9 @@
+/home/wojciechkniec/190410_JEE/src/main/java/com/isa/usersengine/servlet/FindUserByIdServlet.java
 /home/wojciechkniec/190410_JEE/src/main/java/com/isa/usersengine/dao/UsersRepositoryDaoBean.java
 /home/wojciechkniec/190410_JEE/src/main/java/com/isa/usersengine/servlet/WelcomeUserServlet.java
 /home/wojciechkniec/190410_JEE/src/main/java/com/isa/usersengine/repository/UsersRepository.java
 /home/wojciechkniec/190410_JEE/src/main/java/com/isa/usersengine/servlet/HelloServlet.java
 /home/wojciechkniec/190410_JEE/src/main/java/com/isa/usersengine/dao/UsersRepositoryDao.java
+/home/wojciechkniec/190410_JEE/src/main/java/com/isa/usersengine/service/UserService.java
 /home/wojciechkniec/190410_JEE/src/main/java/com/isa/usersengine/domain/User.java
 /home/wojciechkniec/190410_JEE/src/main/java/com/isa/usersengine/Main.java
