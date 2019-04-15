@@ -3,6 +3,7 @@ package com.isa.usersengine.servlet;
 import com.isa.usersengine.domain.User;
 import com.isa.usersengine.service.UserService;
 
+import javax.inject.Inject;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -11,10 +12,11 @@ import java.io.IOException;
 
 @WebServlet("/user")
 public class UserServlet extends HttpServlet {
+    @Inject
+    UserService userService;
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-
-        UserService userService = new UserService();
 
         User user = new User();
 

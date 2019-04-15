@@ -3,6 +3,7 @@ package com.isa.usersengine.servlet;
 import com.isa.usersengine.domain.User;
 import com.isa.usersengine.service.UserService;
 
+import javax.inject.Inject;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -12,8 +13,13 @@ import java.io.PrintWriter;
 
 @WebServlet("/find-user-by-id")
 public class FindUserByIdServlet extends HttpServlet {
+
+    @Inject
+    UserService userService;
+
+    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        UserService userService = new UserService();
+
 
         String idParam = req.getParameter("id");
         PrintWriter writer = resp.getWriter();
@@ -27,6 +33,7 @@ public class FindUserByIdServlet extends HttpServlet {
         if (userbyId != null) {
             writer.println("Name: " + userbyId.getName());
             writer.println("Login: " + userbyId.getLogin());
+            writer.println("Age: " + userbyId.getAge());
         } else {
             writer.println("User has not been found!");
             resp.setStatus(HttpServletResponse.SC_NOT_FOUND);
