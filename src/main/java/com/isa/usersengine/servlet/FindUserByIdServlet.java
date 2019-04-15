@@ -32,6 +32,5 @@ public class FindUserByIdServlet extends HttpServlet {
             resp.setStatus(HttpServletResponse.SC_NOT_FOUND);
             return;
         }
-
     }
 }
